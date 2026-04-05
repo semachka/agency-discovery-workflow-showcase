@@ -53,3 +53,33 @@ This workflow is useful for finding outreach targets that are more likely to ben
 ## Notes
 
 This project is presented as a workflow system and technical showcase of sourcing, enrichment, and qualification logic.
+
+
+## Technical notes
+
+This workflow is built on top of a reusable scraping and enrichment framework.
+
+### Transport modes
+- `http`
+- `browser`
+- `auto`
+
+### Intended data flow
+- `listing -> detail`
+- `listing -> detail -> contact`
+
+### Key layers
+- `models`
+- `http`
+- `adapters`
+- `extractors`
+- `services`
+- `storage`
+- `core/runner.py`
+
+### Additional capabilities
+- SQLite storage and exports
+- strict and soft deduplication
+- CSV, Excel, and JSONL exports
+- optional contact-page enrichment
+- optional raw HTML snapshots
